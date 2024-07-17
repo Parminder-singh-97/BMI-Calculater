@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <title>BMI Calculator</title>
+</head>
+<body>
+    <h1 class="center-align">BMI Calculator</h1>
+
+    <main class="container">
+        <fieldset class="section">
+            <legend>BMI Calculator</legend>
+
+            <form action="" onsubmit="event.preventDefault(); calculateValue();" id="form1">
+                <div class="input-field">
+                    <input type="number" id="weight" name="weight" placeholder="Weight in KG" step="0.01" />
+                    <label for="weight">Weight (in KG):</label>
+                </div>
+
+                <div class="input-field">
+                    <input type="number" id="height" name="height" placeholder="Height in Meters" step="0.01" />
+                    <label for="height">Height (in Mtr):</label>
+                </div>
+
+                <textarea id="result" class="materialize-textarea" readonly placeholder="Result"></textarea>
+                <br />
+
+                <button type="submit" class="btn neon-btn green-neon" onclick="calculateValue()">Calculate</button>
+                <button type="reset" class="btn neon-btn red-neon">Reset</button> 
+                <span>
+                    <a href="https://www.nhlbi.nih.gov/health/educational/lose_wt/BMI/bmi_tbl.htm" target="_blank" title="Table"><i class="fa-solid fa-circle-info"></i></a>
+                </span>
+            </form>
+
+            <h2>Foot to Meter Conversion</h2>
+
+            <div class="input-field">
+                <input type="number" id="Foot" name="Feet" placeholder="Feet" step="0.01" />
+                <label for="Foot">Feet:</label>
+            </div>
+
+            <button type="button" class="btn neon-btn green-neon" onclick="FeetToMeters()">Convert</button>
+
+            <h3>TO</h3>
+            <h3>Meter</h3>
+
+            <textarea id="resultMeter" class="materialize-textarea" readonly placeholder="Result"></textarea>
+        </fieldset>
+    </main>
+
+     
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="/app.js"></script>
+</body>
+</html>

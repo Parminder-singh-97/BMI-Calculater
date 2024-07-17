@@ -1,0 +1,112 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+
+*{
+margin: 0;
+padding: 0;
+box-Sizing: border-box;
+color: #fff;
+font-family: "Poppins", sans-serif;
+
+}
+html,
+body { 
+width: 100%; 
+height:100%;
+}
+
+body {
+
+    display: flex;
+    flex-direction: column;
+}
+h1{
+    width: 100%;
+    text-align: center;
+}
+main {
+    width: 70%;
+    margin: 0 auto;
+}
+fieldset{
+    font-weight: 700;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+textarea{
+    width: 100%;
+    padding: 1rem;
+    margin: 1rem 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: none;
+    
+}
+h2{
+    text-align: center;
+}
+h3{
+    text-align: center;
+}
+
+span i{
+    font-size: 2rem;
+    color: #fff;
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+    
+
+}
+#form1{
+    position: relative;
+}
+
+
+body {
+    background-color: #282a36; 
+}
+
+.neon-btn {
+    color: #fff; 
+    border: none;
+    background-color: transparent;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    outline: none;
+    margin-top: 1rem;
+}
+
+.neon-btn::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 4px;
+    pointer-events: none;
+}
+
+.red-neon{
+
+    margin-left: 3rem;
+}
+
+.neon-btn.green-neon::after {
+    box-shadow: 0 0 15px #0f0, 0 0 20px #0f0, 0 0 25px #0f0, 0 0 40px #0f0;
+}
+
+.neon-btn.red-neon::after {
+    box-shadow: 0 0 15px #f00, 0 0 20px #f00, 0 0 25px #f00, 0 0 40px #f00;
+}
+
+.neon-btn:hover::after {
+    box-shadow: 0 0 40px green, 0 0 60px rgb(255, 255, 255), 0 0 80px orange, 0 0 100px orange;
+} 
